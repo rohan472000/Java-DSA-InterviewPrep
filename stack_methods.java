@@ -7,7 +7,7 @@ public class stack_methods {
       s.push(2);
       s.push(3);
       pushAtBottom(4,s);
-        
+
       reverse(s);
       while(!s.isEmpty()){
           System.out.println(s.peek());
