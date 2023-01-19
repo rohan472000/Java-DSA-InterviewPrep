@@ -57,6 +57,15 @@ public class wordbreak_problem {
         }
         return true;
     }
+    public static int countNode(Node root){
+        if (root == null) return 0;
+        int count = 0;
+        for (int i = 0; i < 26; i++) {
+            if (root.children[i] != null)
+                count+= countNode(root.children[i]);
+        }
+        return count+1;
+    }
     public static void main(String[] args) {
         String words[] = {"the","a","there","their","any"};
         String key = "theany";
@@ -75,6 +84,18 @@ public class wordbreak_problem {
             insert(word[i]);
         }
         System.out.println(startswith(prefix));
+
+
+
+        ///////////////////// comment above to run below function and lines
+        System.out.println("---------------------------");
+        String str = "ababa";
+        for (int i = 0; i < str.length(); i++) {
+            String suffix = str.substring(i);
+            //System.out.println(suffix);
+            insert(suffix);
+        }
+        System.out.println(countNode(root));
     }
 
 
