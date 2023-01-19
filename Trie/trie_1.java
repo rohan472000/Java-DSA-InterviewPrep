@@ -39,12 +39,23 @@ public class trie_1 {
         }
         return true;
     }
+    public  static boolean wordbreak(String key){
+        if (key.length() == 0) return true;
+        for (int i = 0; i < key.length(); i++) {
+            String first = key.substring(0,i);
+            String second = key.substring(i);
+            if(search(first) && wordbreak(second)) return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         String words[] = {"the","a","there","their","any"};
+        String key = "the";
         for (int i = 0; i < words.length; i++) {
             insert(words[i]);
         }
 
         System.out.println(search("thor"));
+        System.out.println(wordbreak(key));
     }
 }
