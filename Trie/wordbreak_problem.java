@@ -118,6 +118,7 @@ public class wordbreak_problem {
             insert(suffix);
         }
         System.out.println(countNode(root));
+
     }
 
 
