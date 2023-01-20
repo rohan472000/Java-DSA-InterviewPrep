@@ -66,6 +66,21 @@ public class wordbreak_problem {
         }
         return count+1;
     }
+    public static String ans="";
+    public static void longestWord(Node root,StringBuilder temp){
+        if (root == null) return;
+        for (int i = 0; i < 26; i++) {
+            if (root.children[i] != null && root.children[i].eow == true){
+                temp.append((char)(i+'a'));
+                if (temp.length() > ans.length()){
+                    ans = temp.toString();
+                }
+                longestWord(root.children[i],temp);
+
+                temp.deleteCharAt(temp.length()-1);
+            }
+        }
+    }
     public static void main(String[] args) {
         String words[] = {"the","a","there","their","any"};
         String key = "theany";
@@ -84,7 +99,14 @@ public class wordbreak_problem {
             insert(word[i]);
         }
         System.out.println(startswith(prefix));
+        ///////////////////////////////////
 
+        String wordss[] ={"a","banana","app","appl","ap","apply","apple"};
+        for (int i = 0; i < wordss.length; i++) {
+            insert(wordss[i]);
+        }
+        longestWord(root, new StringBuilder(""));
+        System.out.println(ans);
 
 
         ///////////////////// comment above to run below function and lines
