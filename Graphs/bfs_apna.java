@@ -60,11 +60,39 @@ public class bfs_apna {
             }
         }
     }
+    // for disconnected graphs
+    public static void bfs(ArrayList<edge> graph[], int V, boolean vis[], int start){
+       Queue<Integer> q = new LinkedList<>();
+
+       q.add(start);
+
+       while(!q.isEmpty()){
+          int curr = q.remove();
+          if (vis[curr] == false){
+              System.out.print(curr+" ");
+              vis[curr] = true;
+
+              for (int i = 0; i < graph[curr].size(); i++) {
+                  edge e = graph[curr].get(i);
+                  q.add(e.dest);
+              }
+          }
+       }
+    }
     public static void main(String[] args) {
         int V = 7;
         ArrayList<edge> graph[] = new ArrayList[V];
         createGraph(graph);
         bfs(graph,V);
+        System.out.println();
+
+        // for disconnected graph or can be used for every graph other than disconnected graph
+        boolean vis[] = new boolean[V];
+        for (int i = 0; i < V; i++) {
+            if (vis[i] == false){
+                bfs(graph,V,vis,i);
+            }
+        }
         System.out.println();
     }
 }
