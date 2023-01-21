@@ -37,7 +37,7 @@ public class graph_apna {
         //print 2's neighbour
         for (int i = 0; i < graph[2].size(); i++) {
             Edge e = graph[2].get(i);
-            System.out.println(e.dest+" ");
+            System.out.println(e.dest+"  ");
         }
     }
 }
