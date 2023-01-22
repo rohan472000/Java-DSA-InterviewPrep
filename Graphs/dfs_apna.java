@@ -40,6 +40,8 @@ public class dfs_apna {
         graph[5].add(new edge(6,5));
 
     }
+
+    // O(V+E) V = vertices and E = edges
     public static void dfs(ArrayList<edge> graph[], int curr,boolean vis[]){
         System.out.print(curr+" ");
         vis[curr] = true;
@@ -59,7 +61,7 @@ public class dfs_apna {
         System.out.println();
 
         // for disconnected graph or can be used for every graph other than disconnected graph
-        // comment 58 line to run below
+        // comment 58 line  to run below
         for (int i = 0; i < V; i++) {
             if (vis[i] == false){
                 dfs(graph,0,vis);
