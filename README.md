@@ -41,6 +41,3 @@ To run the tests for any implementation, navigate to its folder and run the rele
 
 ## Contributing
 I welcome contributions to this repo! If you find a bug or have an improvement to suggest, please feel free to open an issue or submit a pull request.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
