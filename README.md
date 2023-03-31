@@ -18,6 +18,9 @@ The following data structures are currently implemented in this repo:
 - Heap
 - Graph
 - Hash Table
+
+ `and many more(please list out names here by editing)`
+ 
 Each data structure has its own folder containing its implementation, along with relevant tests.
 
 ## Algorithms
