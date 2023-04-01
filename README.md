@@ -19,7 +19,7 @@ The following data structures are currently implemented in this repo:
 - Graph
 - Hash Table
 
- `and many more(please list out names here by editing)`
+and many more(please list out names here by editing)`
  
 Each data structure has its own folder containing its implementation, along with relevant tests.
 
@@ -35,6 +35,7 @@ The following algorithms are currently implemented in this repo:
 - Searching Algorithms:
 - Linear Search
 - Binary Search
+
 Each algorithm has its own folder containing its implementation, along with relevant tests.
 
 ## Usage
