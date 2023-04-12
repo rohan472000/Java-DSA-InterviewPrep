@@ -19,6 +19,7 @@ public class SudokuSolver {
         return true;
     }
 }
+// alternative is there in below but not getting answers
 // // class Solution {
 // //     public boolean isSafe(char[][] board, int row, int col, int number){
 // //         //row & column
