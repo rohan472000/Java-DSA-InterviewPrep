@@ -1,6 +1,7 @@
 name: Pull Request Merged
 on:
   pull_request:
+    branches: [main]
     types:
       - closed
 
