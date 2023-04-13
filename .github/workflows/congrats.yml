@@ -1,6 +1,9 @@
 name: Pull Request Merged
 
-on: [push, pull_request]
+on:
+  pull_request:
+    types:
+      - closed
 jobs:
   notify:
     runs-on: ubuntu-latest
