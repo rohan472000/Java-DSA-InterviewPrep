@@ -1,6 +1,6 @@
 <!-- For completed items, change [ ] to [x] -->
 
-- [ ] Fixed Bug
+- [ ] Fixed Bug/issues
 - [ ] Added algo/questions_answers/docs
 - [ ] This pull request is all my own work -- I have not plagiarized it.
 - [ ] All filenames are in PascalCase.
