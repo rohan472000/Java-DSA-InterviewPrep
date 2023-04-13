@@ -1,9 +1,5 @@
 name: Pull Request Merged
-on:
-  pull_request:
-    branches: [main]
-    types:
-      - closed
+on:[push,pull_request]
 
 jobs:
   notify:
