@@ -3,7 +3,7 @@ package Heap;
 import java.util.ArrayList;
 
 public class apna_heap {
-    static  class Heap{
+    static  class Heap{ //min heap only
         ArrayList<Integer> arr = new ArrayList<>();
 
         public void add(int data){// O(log(n))
@@ -72,7 +72,7 @@ public class apna_heap {
         h.add(4);
         h.add(5);
         h.add(1 );
-        while (!h.isEmpty()){
+        while (!h.isEmpty()){ // heap sort
             System.out.println(h.peek());
             h.remove();
         }
