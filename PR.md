@@ -1,4 +1,4 @@
-Read CONTRIBUTING.md: Before making any contributions, it's essential to thoroughly read and understand the guidelines provided in the project's CONTRIBUTING.md file. This document typically contains information on coding standards, the development process, and other important project-specific details.
+- [ ] Read CONTRIBUTING.md: Before making any contributions, it's essential to thoroughly read and understand the guidelines provided in the project's CONTRIBUTING.md file. This document typically contains information on coding standards, the development process, and other important project-specific details.
 
 Original Work: Ensure that the pull request represents your own work and that you have not plagiarized or copied code from other sources. Original contributions are valued in open-source projects.
 
