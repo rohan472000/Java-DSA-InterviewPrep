@@ -1,5 +1,5 @@
 []Read CONTRIBUTING.md: Review and understand project guidelines in CONTRIBUTING.md.
-[]Original Work: Ensure PR contains your original work, no plagiarism.
+• [ ] Original Work: Ensure PR contains your original work, no plagiarism.
 []Automated Tests: PR must pass automated tests and maintain existing functionality.
 []One Algorithm per Pull Request: Open separate PRs for each algorithm change.
 []File Placement: New Python files go in existing project directories.
