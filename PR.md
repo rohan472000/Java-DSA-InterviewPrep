@@ -11,4 +11,4 @@
 * [ ] Type Annotations: Annotate parameters and return values with Python type hints.
 * [ ] Doctests: Include doctests for code correctness.
 * [ ] Include Explanatory URLs: New algorithms should link to relevant sources.
-* [ ] Resolve Issues: Mention issue numbers if PR resolves them (e.g., "Fixes #ISSUE-NUMBER").
+* [ ] Resolve Issues: Mention issue numbers if PR resolves them (e.g., "Fixes #ISSUE-NUMBER" or "#RELATED-ISSUE").
