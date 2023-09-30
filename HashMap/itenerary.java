@@ -22,13 +22,13 @@ public class itenerary {
         map.put("delhi","goa");
 
         String start = getStart(map);
-        //System.out.println(start+"-----");
+        // System.out.println(start+"-----");
         while (map.containsKey(start)){
-            System.out.println("-----");
+            // System.out.println("-----");
             System.out.println(start);
             start = map.get(start);
         }
-        System.out.println("-------");
+        // System.out.println("-------");
         System.out.println(start);
     }
 }
