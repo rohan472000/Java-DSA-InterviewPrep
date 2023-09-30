@@ -3,9 +3,9 @@
 * */
 public class Kadane_algo {
     public static void main(String[] args) {
-   int a[] = {-2,-3,4,-1,-2,1,5,-3};
-        int b[] = {1,2,3,-2,5};
-   System.out.print(kadane(b));
+       int a[] = {-3,4,-1,-2,1,5,-3};
+       int b[] = {1,2,3,-2,5};
+       System.out.print(kadane(b));
     }
     static int max_sum=0;
     static int cur_sum=0;
