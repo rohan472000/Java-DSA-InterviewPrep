@@ -4,9 +4,9 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class Flatten_multilevelArray {
-    public static void main(String[] args) {
-
-    }
+    // public static void main(String[] args) {
+      
+    // }
     static class Node {
         public int val;
         public Node prev;
@@ -33,6 +33,7 @@ public class Flatten_multilevelArray {
                 head.next.prev = head;
             }
             head = head.next;
-        }return curr;
+        }
+        return curr;
     }
 }
