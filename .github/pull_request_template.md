@@ -18,5 +18,4 @@
 - [ ] This pull request is all my own work -- I have not plagiarized it.
 - [ ] All filenames are in PascalCase.
 - [ ] All functions and variable names follow Java naming conventions.
-- [ ] All test cases have passed.
 - [ ] All new algorithms have a URL in their comments that points to Wikipedia or other similar explanations.
