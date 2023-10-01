@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/segment-tree-data-structure/
+
 int[] arr,segt ;
 
 void solve() throws Exception{
