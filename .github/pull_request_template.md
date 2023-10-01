@@ -4,7 +4,7 @@
 ### Description
 [Provide a concise description of the changes made in this pull request.]
 
-### Related Issue
+### Related/Fixes Issue
 [Reference the related issue or task using its number or link.]
 
 ### Changes Made
