@@ -2,6 +2,7 @@
 // BASICALLY USED TO FIND SHORTEST PATH OF ALL NODES FROM SOURCE NODE IN A GRAPH
 // REQUIREMENTS:- A DISTANCE ARRAY
 // CONCEPTS:- DISTANCE ARRAY -> This Array will store the distances of nodes from source node.
+// WIKI:- https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
 
 import java.util.*;
 
@@ -39,5 +40,3 @@ public class BellmanFord {
         return dist;
     }
 }
-
-// WIKI:- https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm

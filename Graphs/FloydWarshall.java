@@ -1,5 +1,6 @@
 // --------------------------------FLOYD WARSHALL's ALGORITHM---------------------------------------------
 // BASICALLY USED TO FIND SHORTEST PATH BETWEEN EACH AND EVERY NODE IN A GRAPH
+// WIKI:- https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 
 public class FloydWarshall {
     public void shortest_distance(int[][] matrix) {
@@ -28,5 +29,3 @@ public class FloydWarshall {
         }
     }
 }
-
-// WIKI:- https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
