@@ -2,6 +2,7 @@
 // BASICALLY USED TO FIND OUT THE MST SUM OR THE MST TREE
 // REQUIREMENTS:- PRIORITY QUEUE AND A VISITED ARRAY
 // CONCEPTS:- VISITED ARRAY -> This Array will tell whether a node is visited or not.
+// WIKI:- https://en.wikipedia.org/wiki/Prim%27s_algorithm
 
 import java.util.*;
 
@@ -60,5 +61,3 @@ public class Prims_Algo {
         return sum;
     }
 }
-
-// WIKI:- https://en.wikipedia.org/wiki/Prim%27s_algorithm
