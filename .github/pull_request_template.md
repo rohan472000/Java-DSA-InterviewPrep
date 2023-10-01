@@ -1,4 +1,17 @@
 <!-- For completed items, change [ ] to [x] -->
+## Pull Request Checkboxes and descriptions
+
+### Description
+[Provide a concise description of the changes made in this pull request.]
+
+### Related/Fixes Issue
+[Reference the related issue or task using its number or link.]
+
+### Changes Made
+[Briefly list the specific code changes made.]
+
+### Screenshots (if applicable)
+[Include any relevant screenshots or images here.]
 
 - [ ] Fixed Bug/issues
 - [ ] Added algo/questions_answers/docs
