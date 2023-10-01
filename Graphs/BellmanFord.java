@@ -8,10 +8,27 @@ import java.util.*;
 
 public class BellmanFord {
     public static void main(String[] args) {
-        // main algo is in bellman_ford function
+        int V = 3;
+        int E = 4;
+        // example -----> [[0,1,5],[1,0,3],[1,2,-1],[2,0,1]]
+        ArrayList<ArrayList<Integer>> edges = new ArrayList<>();
+        int[][] arr = { { 0, 1, 5 }, { 1, 0, 3 }, { 1, 2, -1 }, { 2, 0, 1 } };
+        for (int i = 0; i < 4; i++) {
+            ArrayList<Integer> tmp = new ArrayList<Integer>();
+            tmp.add(arr[i][0]); // edge from this node
+            tmp.add(arr[i][1]); // edge to this node
+            tmp.add(arr[i][2]); // weight of this edge
+            edges.add(tmp);
+        }
+        int S = 2; // Our Source Node
+        int[] ans = bellman_ford(V, edges, S);
+        // Printing our result(Optional)
+        for (int i = 0; i < ans.length; i++)
+            System.out.print(ans[i] + " ");
+        // Answer would come out as [1,6,0]
     }
 
-    public int[] bellman_ford(int V, ArrayList<ArrayList<Integer>> edges, int S) {
+    static int[] bellman_ford(int V, ArrayList<ArrayList<Integer>> edges, int S) {
         int[] dist = new int[V];
         for (int i = 0; i < V; i++) {
             if (S == i)

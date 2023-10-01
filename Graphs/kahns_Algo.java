@@ -8,10 +8,25 @@ import java.util.*;
 
 public class kahns_Algo {
     public static void main(String[] args) {
-        // main algo is in kahn function
+        int V = 6;
+        // example -----> [[],[3],[3],[],[0,1],[2,0]]
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        int[][] mat = { {}, { 3 }, { 3 }, {}, { 0, 1 }, { 2, 0 } }; // There is an directed edge from index to all given
+                                                                    // elements in that index
+        for (int i = 0; i < 6; i++) {
+            ArrayList<Integer> temp = new ArrayList<Integer>();
+            for (int j = 0; j < mat[i].length; j++)
+                temp.add(mat[i][j]);
+            adj.add(temp);
+        }
+        int[] ans = kahn(V, adj);
+        // Printing our result(Optional)
+        for (int i = 0; i < ans.length; i++)
+            System.out.print(ans[i] + " ");
+        // Answer is 4 5 1 2 0 3 here
     }
 
-    public int[] kahn(int V, ArrayList<ArrayList<Integer>> adj) { // V =no. of vertices ,adj =Adjacency matrix
+    static int[] kahn(int V, ArrayList<ArrayList<Integer>> adj) { // V =no. of vertices ,adj =Adjacency matrix
                                                                   // containing edges between vertices
         Queue<Integer> qu = new LinkedList<>();
         int[] indeg = new int[V];
