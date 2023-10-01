@@ -8,8 +8,7 @@ import java.util.*;
 
 public class kahns_Algo {
     public static void main(String[] args) {
-        int V = 6;
-        // example -----> [[],[3],[3],[],[0,1],[2,0]]
+        int vertex = 6;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         int[][] mat = { {}, { 3 }, { 3 }, {}, { 0, 1 }, { 2, 0 } }; // There is an directed edge from index to all given
                                                                     // elements in that index
@@ -19,25 +18,25 @@ public class kahns_Algo {
                 temp.add(mat[i][j]);
             adj.add(temp);
         }
-        int[] ans = kahn(V, adj);
+        int[] ans = kahn(vertex, adj);
         // Printing our result(Optional)
         for (int i = 0; i < ans.length; i++)
             System.out.print(ans[i] + " ");
         // Answer is 4 5 1 2 0 3 here
     }
 
-    static int[] kahn(int V, ArrayList<ArrayList<Integer>> adj) { // V =no. of vertices ,adj =Adjacency matrix
-                                                                  // containing edges between vertices
+    static int[] kahn(int vertex, ArrayList<ArrayList<Integer>> adj) { // vertex =no. of vertices ,adj =Adjacency matrix
+        // containing edges between vertices
         Queue<Integer> qu = new LinkedList<>();
-        int[] indeg = new int[V];
-        int[] ans = new int[V]; // Final Array containing our topological sort
+        int[] indeg = new int[vertex];
+        int[] ans = new int[vertex]; // Final Array containing our topological sort
 
-        for (int i = 0; i < V; i++) {
+        for (int i = 0; i < vertex; i++) {
             for (int j : adj.get(i))
                 indeg[j]++;
         }
 
-        for (int i = 0; i < V; i++) {
+        for (int i = 0; i < vertex; i++) {
             if (indeg[i] == 0)
                 qu.offer(i);
         }

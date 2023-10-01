@@ -1,7 +1,7 @@
 // --------------------------------PRIM'S ALGORITHM---------------------------------------------
 // BASICALLY USED TO FIND OUT THE MST SUM OR THE MST TREE
-// REQUIREMENTS:- PRIORITY QUEUE AND A VISITED ARRAY
-// CONCEPTS:- VISITED ARRAY -> This Array will tell whether a node is visited or not.
+// REQUIREMENTS:- PRIORITY QUEUE AND A vertexISITED ARRAY
+// CONCEPTS:- vertexISITED ARRAY -> This Array will tell whether a node is visited or not.
 // WIKI:- https://en.wikipedia.org/wiki/Prim%27s_algorithm
 
 import java.util.*;
@@ -19,31 +19,32 @@ class Pair { // A class pair is required here which contains node and it's dista
 
 public class Prims_Algo {
     public static void main(String[] args) {
-        int V = 3;
-        int E = 3;
+        int vertex = 3;
+        int edge = 3;
         // example -----> [[0,1,5],[1,2,3],[0,2,1]]
         int[][] arr = { { 0, 1, 5 }, { 1, 2, 3 }, { 0, 2, 1 } };
-        int ans = prims(V, E, arr);
+        int ans = prims(vertex, edge, arr);
         // Printing our result(Optional)
         System.out.print(ans);
         // Answer would come out as 4
     }
 
-    static int prims(int V, int E, int edges[][]) { // V =no. of vertices ,E =no. of edges ,edges =edges of each node
+    static int prims(int vertex, int edge, int mat[][]) { // vertex =no. of vertices ,E =no. of mat ,mat =mat of each
+                                                          // node
         ArrayList<ArrayList<Pair>> arr = new ArrayList<>();
-        for (int i = 0; i < V; i++)
+        for (int i = 0; i < vertex; i++)
             arr.add(new ArrayList<>());
-        for (int i = 0; i < E; i++) {
-            int parent = edges[i][0];
-            int current = edges[i][1];
-            int wt = edges[i][2];
+        for (int i = 0; i < edge; i++) {
+            int parent = mat[i][0];
+            int current = mat[i][1];
+            int wt = mat[i][2];
 
             arr.get(parent).add(new Pair(current, wt));
             arr.get(current).add(new Pair(parent, wt));
         }
 
         PriorityQueue<Pair> qu = new PriorityQueue<>((a, b) -> a.distance - b.distance); // Sort w.r.t their distances
-        int[] visited = new int[V];
+        int[] visited = new int[vertex];
         int sum = 0;
         qu.add(new Pair(0, 0));
 
