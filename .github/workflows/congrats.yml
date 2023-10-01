@@ -15,7 +15,7 @@ jobs:
     - name: Add comment
       run: |
         if [ "${{ github.event.pull_request.merged }}" == "true" ]; then
-          # Customize your comment here
+          Congratulations :)
           pull_request_number=${{ github.event.pull_request.number }}
           comment_body=":tada: Congratulations! The pull request #${pull_request_number} has been merged successfully! :tada:"
           echo "${comment_body}" | gh pr review --approve --comment --body -
