@@ -60,3 +60,5 @@ public class Prims_Algo {
         return sum;
     }
 }
+
+// WIKI:- https://en.wikipedia.org/wiki/Prim%27s_algorithm
