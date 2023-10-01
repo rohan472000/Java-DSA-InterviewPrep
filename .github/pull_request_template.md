@@ -1,7 +1,7 @@
 <!-- For completed items, change [ ] to [x] -->
 ## Pull Request Description
 
-**Title:** [Add a brief one-line title here]
+<!-- give description here -->
 
 ### Description
 [Provide a concise description of the changes made in this pull request.]
