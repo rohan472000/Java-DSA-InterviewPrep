@@ -5,6 +5,8 @@ import java.util.*;
 *   S: source vertex to start traversing graph with
 *   V: number of vertices
 */
+//https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+
 class Solution {
     static int[] bellman_ford(int V,
                               ArrayList<ArrayList<Integer>> edges, int S) {
