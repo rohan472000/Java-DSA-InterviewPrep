@@ -9,7 +9,6 @@ Basic Steps:
 3.Apply Insertion Sort to each subarray independently to sort the elements within the subarray.
 4.Reduce the gap between elements and repeat steps 2 and 3 until the gap becomes 1.
 5.Finally, apply Insertion Sort with a gap of 1 to perform the final sorting, which is usually efficient because the array has been partially sorted by the previous steps.
-It has a time complexity that depends on the gap sequence used but often exhibits a better average-case performance compared to the simple Insertion Sort.
 * For more information, see:https://en.wikipedia.org/wiki/Shellsort */
 
 public class shell_sort {
