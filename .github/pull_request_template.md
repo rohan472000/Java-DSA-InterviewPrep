@@ -1,7 +1,5 @@
 <!-- For completed items, change [ ] to [x] -->
-## Pull Request Description
-
-<!-- Give description here  -->
+## Pull Request Checkboxes and descriptions
 
 ### Description
 [Provide a concise description of the changes made in this pull request.]
