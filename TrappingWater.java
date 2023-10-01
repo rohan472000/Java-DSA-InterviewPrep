@@ -1,7 +1,7 @@
 public class TrappingWater {
     public static void main(String[] args) {
-   int b[] = {3,1,2,4,0,1,3,2};
-   System.out.println(Trap(b));
+       int b[] = {3,1,2,4,0,1,3,2};
+       System.out.println(Trap(b));
     }
     static int ans=0;
     static int Trap(int a[]){
@@ -13,7 +13,9 @@ public class TrappingWater {
         for (int i = 1; i < n ; i++) {
             left[i] = Math.max(left[i-1],a[i]);
         }
+        
         right[n-1] = a[n-1];
+        
         for (int i = n-2; i >= 0; i-- ) {
             right[i] = Math.max(right[i+1],a[i]);
         }

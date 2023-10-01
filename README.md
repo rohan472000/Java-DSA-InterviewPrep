@@ -17,9 +17,10 @@ The following data structures are currently implemented in this repo:
 - Binary Search Tree
 - Heap
 - Graph
-- Hash Table
-
-and many more(please list out names here by editing)`
+- Hash Tables
+- Trie
+- Array
+- ArrayList
  
 Each data structure has its own folder containing its implementation, along with relevant tests.
 

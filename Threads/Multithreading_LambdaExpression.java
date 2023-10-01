@@ -24,8 +24,8 @@ public class Multithreading_LambdaExpression {
                 }
 
         };
-        //obj1.start();
-        //obj2.start();
+        obj1.start();
+        obj2.start();
 
 
         // Thread class has start() but Runnable interface doesnt have start()

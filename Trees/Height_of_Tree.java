@@ -2,37 +2,54 @@ package Trees;
 
 import java.util.Scanner;
 
-public class Height_of_Tree {
-    static Scanner sc;
+class TreeNode {
+    int data;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class HeightOfTree {
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-          sc  = new Scanner(System.in);
+        TreeNode root = createTree();
+        int treeHeight = height(root);
+        System.out.println("Height of the tree is: " + treeHeight);
     }
-    static class Node{
-        static Node left,right;
-        public static int data;
-        Node(int data){
-            this.data = data;
+
+    static TreeNode createTree() {
+        System.out.print("Enter data (-1 to exit): ");
+        int data = sc.nextInt();
+
+        if (data == -1) {
+            return null;
         }
-    }
-    static Node createNode(){
-        Node root = null;
-        System.out.println("Enter data : ");
-        int data= sc.nextInt();
 
-        if (data == -1) return null;
+        TreeNode root = new TreeNode(data);
 
-         root = new Node(data);
+        System.out.println("Enter left child of " + data + ": ");
+        root.left = createTree();
 
-        System.out.println("Enter left : "+data);
-        root.left = createNode();
+        System.out.println("Enter right child of " + data + ": ");
+        root.right = createTree();
 
-        System.out.println("Enter Right : "+data);
-        root.right = createNode();
         return root;
     }
-    static int height(Node root){
-        if (root == null)
-            return  0;
-        return Math.max(height(root.left),height(root.right))+1;
+
+    static int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 }
