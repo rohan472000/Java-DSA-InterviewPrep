@@ -19,10 +19,17 @@ class Pair { // A class pair is required here which contains node and it's dista
 
 public class Prims_Algo {
     public static void main(String[] args) {
-        // main algo is in prims function
+        int V = 3;
+        int E = 3;
+        // example -----> [[0,1,5],[1,2,3],[0,2,1]]
+        int[][] arr = { { 0, 1, 5 }, { 1, 2, 3 }, { 0, 2, 1 } };
+        int ans = prims(V, E, arr);
+        // Printing our result(Optional)
+        System.out.print(ans);
+        // Answer would come out as 4
     }
 
-    public int prims(int V, int E, int edges[][]) { // V =no. of vertices ,E =no. of edges ,edges =edges of each node
+    static int prims(int V, int E, int edges[][]) { // V =no. of vertices ,E =no. of edges ,edges =edges of each node
         ArrayList<ArrayList<Pair>> arr = new ArrayList<>();
         for (int i = 0; i < V; i++)
             arr.add(new ArrayList<>());
