@@ -1,3 +1,9 @@
+// A Disjoint-Set Union (DSU) data structure, also known as a Union-Find data structure, is a data structure that helps manage a collection of disjoint sets. It provides two primary operations: union and find.
+
+// DSU is efficient, especially when using path compression and union-by-rank heuristics. The time complexity for the Find operation is nearly constant on average, making it a valuable tool for solving problems that involve partitioning elements into disjoint sets.
+
+// reference https://cp-algorithms.com/data_structures/disjoint_set_union.html
+
 import java.io.*;
 import java.util.*;
 class DisjointSet {
