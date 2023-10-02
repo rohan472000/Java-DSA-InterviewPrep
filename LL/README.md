@@ -1,9 +1,9 @@
 # Linked List Data Structure Algorithms
-Linked list is a linear data structure that includes a series of connected nodes. 
-Linked list can be defined as the nodes that are randomly stored in the memory. 
+Linked List is a linear data structure that includes a series of connected nodes. 
+Linked List can be defined as the nodes that are randomly stored in the memory. 
 A node in the linked list contains two parts, i.e., first is the data part and second is the address part. 
 The last node of the list contains a pointer to the null. After array, linked list is the second most used data structure. 
-In a linked list, every link contains a connection to another link.
+In a Linked List, every link contains a connection to another link.
 
 ## Types of Linked Lists
 - Singly Linked List
