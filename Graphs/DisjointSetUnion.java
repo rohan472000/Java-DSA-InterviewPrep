@@ -1,0 +1,66 @@
+// A Disjoint-Set Union (DSU) data structure, also known as a Union-Find data structure, is a data structure that helps manage a collection of disjoint sets. It provides two primary operations: union and find.
+
+// DSU is efficient, especially when using path compression and union-by-rank heuristics. The time complexity for the Find operation is nearly constant on average, making it a valuable tool for solving problems that involve partitioning elements into disjoint sets.
+
+// reference https://cp-algorithms.com/data_structures/disjoint_set_union.html
+
+import java.io.*;
+import java.util.*;
+class DisjointSet {
+    List<Integer> rank = new ArrayList<>();
+    List<Integer> parent = new ArrayList<>();
+    public DisjointSet(int n) {
+        for (int i = 0; i <= n; i++) {
+            rank.add(0);
+            parent.add(i);
+        }
+    }
+
+    public int findUPar(int node) {
+        if (node == parent.get(node)) {
+            return node;
+        }
+        int ulp = findUPar(parent.get(node));
+        parent.set(node, ulp);
+        return parent.get(node);
+    }
+
+    public void unionByRank(int u, int v) {
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
+        if (ulp_u == ulp_v) return;
+        if (rank.get(ulp_u) < rank.get(ulp_v)) {
+            parent.set(ulp_u, ulp_v);
+        } else if (rank.get(ulp_v) < rank.get(ulp_u)) {
+            parent.set(ulp_v, ulp_u);
+        } else {
+            parent.set(ulp_v, ulp_u);
+            int rankU = rank.get(ulp_u);
+            rank.set(ulp_u, rankU + 1);
+        }
+    }
+
+}
+
+class Main {
+    public static void main (String[] args) {
+        DisjointSet ds = new DisjointSet(7);
+        ds.unionByRank(1, 2);
+        ds.unionByRank(2, 3);
+        ds.unionByRank(4, 5);
+        ds.unionByRank(6, 7);
+        ds.unionByRank(5, 6);
+
+        // if 3 and 7 same or not
+        if (ds.findUPar(3) == ds.findUPar(7)) {
+            System.out.println("Same");
+        } else
+            System.out.println("Not Same");
+
+        ds.unionByRank(3, 7);
+        if (ds.findUPar(3) == ds.findUPar(7)) {
+            System.out.println("Same");
+        } else
+            System.out.println("Not Same");
+    }
+}
