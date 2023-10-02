@@ -8,8 +8,7 @@
 // Change the substrings S[0, 2] and S[4, 6](= S1) to the string S2(= “a”)
 // modifies the string S to “aba”. Therefore, print “aba”.
 class GFG {
- 
-  // Function to replace all the occurrences
+ // Function to replace all the occurrences
   // of the subString S1 to S2 in String S
   static void modifyString(String s, String s1, String s2)
   {
