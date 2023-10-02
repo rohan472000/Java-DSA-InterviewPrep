@@ -1,61 +1,83 @@
 import java.util.*;
 
-public class topological_sorting {
-    
-    int v;
-    LinkedList adj[];
+// This class represents a directed graph using adjacency
+// list representation
+class topological_sorting
+{
+	private int V; // No. of vertices
+	private LinkedList<Integer> adj[]; // Adjacency List
 
-    topological_sorting(int v){
+	//Constructor
+	topological_sorting(int v)
+	{
+		V = v;
+		adj = new LinkedList[v];
+		for (int i=0; i<v; ++i)
+			adj[i] = new LinkedList();
+	}
 
-        V=v;
-        adj = new LinkedList[v];
+	// Function to add an edge into the graph
+	void addEdge(int v,int w) { 
+		adj[v].add(w); 
+	}
 
-        for(int i=0; i<v; i++)
-            adj[i] = new LinkedList<>();
-    }
+	// A recursive function used by topologicalSort
+	void topologicalSortUtil(int v, boolean visited[],Stack stack)
+	{
+		// Mark the current node as visited.
+		visited[v] = true;
+		Integer i;
 
-    void addEdge(int v, int w){
-        adj[v].add(w);
-    }
+		// Recur for all the vertices adjacent to this
+		// vertex
+		Iterator<Integer> it = adj[v].iterator();
+		while (it.hasNext())
+		{
+			i = it.next();
+			if (!visited[i])
+				topologicalSortUtil(i, visited, stack);
+		}
 
-    void topologicalSortHelp(int v, Stack<Integer> stack, boolean visited[]){
+		// Push current vertex to stack which stores result
+		stack.push(new Integer(v));
+	}
 
-        visited[v]=true;
+	// The function to do Topological Sort. It uses
+	// recursive topologicalSortUtil()
+	void topologicalSort()
+	{
+		Stack stack = new Stack();
 
-        for(int neighbor : adj[v]){
-            if(!visited[neighbor])
-                topologicalSortHelp(neighbor, stack, visited);
-        }
-        stack.push(v);
-    }
+		// Mark all the vertices as not visited
+		boolean visited[] = new boolean[V];
+		for (int i = 0; i < V; i++)
+			visited[i] = false;
 
-    void topologicalSort() {
+		// Call the recursive helper function to store
+		// Topological Sort starting from all vertices
+		// one by one
+		for (int i = 0; i < V; i++)
+			if (visited[i] == false)
+				topologicalSortUtil(i, visited, stack);
 
-        Stack<Integer> stack = new Stack<>();
-        boolean visited[] = new boolean[v];
-        
-        for(int i=0; i<V; i++) {
-            if(!visited[i]) {
-                topologicalSortHelp(i, stack, visited);
-            }
-        }
-        while(!stack.isEmpty())
-            System.out.print(stack.pop() + " ");
-    }
+		// Print contents of stack
+		while (stack.empty()==false)
+			System.out.print(stack.pop() + " ");
+	}
 
-    public static void main(String[] args) {
+	// Main method
+	public static void main(String args[])
+	{
+		topological_sorting g = new topological_sorting(6);
+		g.addEdge(5, 2);
+		g.addEdge(5, 0);
+		g.addEdge(4, 0);
+		g.addEdge(4, 1);
+		g.addEdge(2, 3);
+		g.addEdge(3, 1);
 
-        Graph g = new Graph(6);
-
-        g.addEdge(5, 2);
-        g.addEdge(5, 0);
-        g.addEdge(4, 0);
-        g.addEdge(4, 1);
-        g.addEdge(2, 3);
-        g.addEdge(3, 1);
-
-        System.out.println("Topological Sort of the Graph:");
-        g.topologicalSort();
-    }
+		System.out.println("Topological sort of the given graph");
+		g.topologicalSort();
+	}
 }
 
