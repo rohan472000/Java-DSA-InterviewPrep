@@ -10,19 +10,24 @@ This is a collection of my implementations of various Data Structures and Algori
 ## Data Structures
 The following data structures are currently implemented in this repo:
 
-- Linked List
-- Stack
-- Queue
-- Binary Tree
-- Binary Search Tree
-- Heap
-- Graph
-- Hash Tables
-- Trie
 - Array
 - ArrayList
+- Sorting
+- String
+- Linked List
+- Stack
+- Threads
+- Queue
+- Priority Queue
+- Heap
+- Hash Map
+- Tree
+- Binary Search Tree
+- Graph
+- Trie 
  
-Each data structure has its own folder containing its implementation, along with relevant tests.
+Each data structure has its own folder containing its implementation, along with relevant tests.<br>
+This repository also includes important LeetCode problems and mathematical content that is beneficial for understanding data structures and algorithms.
 
 ## Algorithms
 The following algorithms are currently implemented in this repo:
