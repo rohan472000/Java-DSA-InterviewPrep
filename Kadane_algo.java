@@ -1,7 +1,8 @@
 /*
 * maximum continuos sub-array
 * */
-class Solution {
+class KadaneAlgo {
+
     public static int maxSubArray(int[] nums) {
         int cs = nums[0]; // Start with the first element for case of all negative elements
 
