@@ -1,14 +1,5 @@
 import java.util.Arrays;
-/* A Sudoku solver algorithm is a computational method for solving Sudoku puzzles,
-      which are 9x9 grids that require filling in numbers from 1 to 9. The goal is to
-      ensure that each row, column, and 3x3 region contains each number exactly once.
-      The algorithm starts by finding an empty cell and attempting to place a number in it.
-      It checks for conflicts with existing numbers and backtracks when necessary.
-      This process continues until a solution is found or all possibilities are exhausted.
-      It relies on recursive backtracking and constraint propagation to navigate the puzzle space efficiently.
-      Sudoku solvers can vary in complexity, incorporating heuristics and advanced techniques to improve
-      performance on challenging puzzles. Ultimately, the algorithm seeks to provide a valid and complete
-      solution to the Sudoku puzzle.
+/* The Sudoku algorithm is a backtracking-based approach to solving Sudoku puzzles. It starts by selecting an empty cell and attempting to fill it with a number from 1 to 9. If a valid number is found, it moves to the next empty cell. If no valid number can be placed, it backtracks to the previous cell and tries a different number until the puzzle is solved or deemed unsolvable.
 Here is the wikipeida link https://en.wikipedia.org/wiki/Sudoku
  */
 public class Sudoku {
