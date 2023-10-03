@@ -1,26 +1,24 @@
 /*
 * maximum continuos sub-array
 * */
-public class Kadane_algo {
-    public static void main(String[] args) {
-       int a[] = {-3,4,-1,-2,1,5,-3};
-       int b[] = {1,2,3,-2,5};
-       System.out.print(kadane(b));
-    }
-    static int max_sum=0;
-    static int cur_sum=0;
-    static int kadane(int[] a){
-        for (int i = 0; i < a.length ; i++) {
-           cur_sum = cur_sum + a[i];
+class Solution {
+    public static int maxSubArray(int[] nums) {
+        int cs = nums[0]; // Start with the first element for case of all negative elements
 
-           if (cur_sum > max_sum)
-           {
-              max_sum = cur_sum;
-           }
-           if (cur_sum < 0){
-               cur_sum=0;
-           }
+
+        int ms = nums[0]; // Initialize max sum with the first element 
+
+        for (int i = 1; i < nums.length; i++) {
+            cs = Math.max(nums[i], cs + nums[i]); 
+            ms = Math.max(cs, ms); 
         }
-        return max_sum;
+
+        return ms;
+    }
+
+    public static void main(String[] args) {
+        int nums[] = {-2, 1, -3, 4};
+        int result = maxSubArray(nums);
+        System.out.println(result);
     }
 }
