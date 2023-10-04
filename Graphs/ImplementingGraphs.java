@@ -38,7 +38,7 @@ class Graph {
     }
 }
 
-public class Main {
+public class ImplementingGraphs {
     public static void main(String[] args) {
         // Create a graph with 5 vertices
         // For more details, see: https://en.wikipedia.org/wiki/Graph_theory
