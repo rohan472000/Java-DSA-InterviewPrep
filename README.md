@@ -1,6 +1,6 @@
 # Data Structures and Algorithms in Java
 
-This is a collection of my implementations of various Data Structures and Algorithms in Java. These implementations are intended to help me learn and practice the concepts of Data Structures and Algorithms.
+This is a collection of my implementations of various Data Structures and Algorithms in Java. These implementations are intended to help us learn and practice the concepts of Data Structures and Algorithms.
 
 <div align="center">
 <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%rohan472000%2FJava-DSA-InterviewPrep&label=visitors&countColor=%2337d67a&style=for-the-badge&labelStyle=upper" />
