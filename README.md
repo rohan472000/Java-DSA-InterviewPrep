@@ -11,7 +11,7 @@ This is a collection of my implementations of various Data Structures and Algori
 1. [Data Structures](#datastructure)
 2. [Algorithms](#algo)
 3. [Usage](#usage)
-4. [Contributing](contributing)
+4. [Contributing](#contributing)
 
 
 <a name="datastructure"></a>
