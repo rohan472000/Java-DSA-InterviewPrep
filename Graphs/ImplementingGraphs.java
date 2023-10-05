@@ -14,10 +14,6 @@
    - Graph (Discrete Mathematics): https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)
    - Adjacency List: https://en.wikipedia.org/wiki/Adjacency_list
 
-   Usage:
-   1. Create a Graph object with the desired number of vertices.
-   2. Add edges using the addEdge method.
-   3. Print the graph's adjacency list using the printGraph method.
 
 */
 
