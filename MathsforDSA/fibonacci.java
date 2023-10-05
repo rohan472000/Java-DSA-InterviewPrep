@@ -5,7 +5,9 @@ public class fibonacci{
     public static int fibonacci_sequence(int n) {
 
         int num1 = 0, num2 = 1, count = 0;
-        
+        if (n <= 1) {
+        return n;
+    }
         // Calculate the Fibonacci number iteratively
         while(count<n) {
             int swap = num1 + num2;
