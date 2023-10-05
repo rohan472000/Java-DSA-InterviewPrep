@@ -24,7 +24,7 @@ public class GraphUsingArrayList
             //Printing the vertex
             System.out.println("Adjacency list of " + i); 
             for (int j = 0; j < graph.get(i).size(); j++) { 
-                //printing neighbours of vertices
+                //printing neighbours vertices
                 System.out.print(graph.get(i).get(j) + " "); 
             } 
             System.out.println(); 
