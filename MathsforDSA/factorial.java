@@ -17,7 +17,8 @@ public class factorial {
 
     //Recursive method to calculate Factorial
     public static int fact(int n) {
-
+        if(Character.isDigit(n) == false)
+            return 0;
         if(n == 0)
             return 1; //Base case Factorial of 0 is 1
         return n * fact(n-1);
