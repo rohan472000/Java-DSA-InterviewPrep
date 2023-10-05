@@ -12,6 +12,7 @@ public class factorial {
     public static void tests() {
        assert fact(1) == 1;
        assert fact(5) == 120;
+       assert fact(0) == 1;
        System.out.println("Successfully Passed Test Cases!"); // Successfull Message print
     }
 
