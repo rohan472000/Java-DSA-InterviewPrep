@@ -1,9 +1,9 @@
 
+//Wikipedia: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+//GFG: https://www.geeksforgeeks.org/graph-representation-using-java-arraylist/
 //Implementing graph using java
 //Implemented adjacency list using arraylist
 //for undirected unweighted graph
-//Wikipedia: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
-//GFG: https://www.geeksforgeeks.org/graph-representation-using-java-arraylist/
 
 package Graphs;
 
@@ -25,7 +25,7 @@ public class GraphUsingArrayList
             //Printing the vertex
             System.out.println("Adjacency list of " + i); 
             for (int j = 0; j < graph.get(i).size(); j++) { 
-                //printing neighbours of vertices
+                //printing neighbours vertices
                 System.out.print(graph.get(i).get(j) + " "); 
             } 
             System.out.println(); 
