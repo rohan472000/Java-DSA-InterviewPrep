@@ -1,7 +1,5 @@
 // More on Factorial : https://en.wikipedia.org/wiki/Factorial
 
-
-
 public class factorial {
 
     // Driver Code
