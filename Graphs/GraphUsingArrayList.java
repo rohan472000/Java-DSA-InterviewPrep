@@ -1,5 +1,3 @@
-
-
 //Implementing graph using java
 //Implemented adjacency list using arraylist
 //for undirected unweighted graph
