@@ -1,8 +1,9 @@
 
-
 //Implementing graph using java
 //Implemented adjacency list using arraylist
 //for undirected unweighted graph
+//Wikipedia: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+//GFG: https://www.geeksforgeeks.org/graph-representation-using-java-arraylist/
 
 package Graphs;
 
