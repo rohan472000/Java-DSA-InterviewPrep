@@ -12,6 +12,7 @@ public class factorial {
     public static void tests() {
        assert fact(1) == 1;
        assert fact(5) == 120;
+       assert fact(0) == 1;
        System.out.println("Successfully Passed Test Cases!"); // Successfull Message print
     }
 
@@ -19,8 +20,7 @@ public class factorial {
     public static int fact(int n) {
         if(Character.isDigit(n) == false)
             return 0;
-        if(n == 0)
-            return 1; //Base case Factorial of 0 is 1
+        if(n == 0)return 1; \
         return n * fact(n-1);
     }
 
