@@ -74,14 +74,13 @@ public class SetterGetterGenerator
 			}
 			File file=new File("tmp.data");
 			if(file.exists()) file.delete();
-			RandomAccessFile randomAccessFile;
-			randomAccessFile=new RandomAccessFile(file, "rw");
-			TMIterator iterator=list.iterator();
-			while(iterator.hasNext())
-			{
+			try( RandomAccessFile randomAccessFile=new RandomAccessFile(file, "rw") ){
+                            TMIterator iterator=list.iterator();
+                            while(iterator.hasNext())
+                            {
 				randomAccessFile.writeBytes(iterator.next()+"\r\n");
-			}
-			randomAccessFile.close();
+                            }
+                        }
 			System.out.println("setter/getter generated for "+c.getSimpleName()+" in file named as tmp.data");
 		}catch(ClassNotFoundException classNotFoundException)
 		{
