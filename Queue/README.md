@@ -10,6 +10,15 @@ There are two ends in the queue collection, i.e., front & rear. Queue has two en
 
 This section contains a lot of important algorithms that help us to use sorting algorithms in various scenarios.
 
+## Types Of Queues
+* Input Restricted Queue (this is a Simple Queue)
+* Output Restricted Queue (this is also a Simple Queue)
+* Circular Queue
+* Double Ended Queue (Deque)
+* Priority Queue
+  - Ascending Priority Queue
+  - Descending Priority Queue
+
 ## Reference
 * <https://www.javatpoint.com/java-queue>
 * <https://en.wikipedia.org/wiki/Queue>
